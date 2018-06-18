@@ -11,7 +11,7 @@ import { Post } from "../../models/Post";
 export class PostsComponent implements OnInit {
   posts: Post[];
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {}
 
   ngOnInit() {
     this.postService.getPosts().subscribe(posts => {
@@ -19,4 +19,7 @@ export class PostsComponent implements OnInit {
     });
   }
 
+  onNewPost(post: Post) {
+    this.posts.unshift(post);
+  }
 }
