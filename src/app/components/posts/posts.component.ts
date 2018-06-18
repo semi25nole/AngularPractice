@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { PostService } from "../../services/post.service";
 
 import { Post } from "../../models/Post";
-import { post } from "selenium-webdriver/http";
 
 @Component({
   selector: "app-posts",
